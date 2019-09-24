@@ -1,0 +1,10 @@
+rootProject.name = 'FrozaFootball'
+
+include ':demo'
+project(':demo').projectDir = new File(settingsDir, 'app')
+
+include ':core'
+project(':core').projectDir = new File(settingsDir, 'sdk-core')
+
+include ':team'
+project(':team').projectDir = new File(settingsDir, 'sdk-team')

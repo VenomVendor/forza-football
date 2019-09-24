@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.detail.ui.TeamDetailFragment">
+
+    <ImageView
+        android:id="@+id/media"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars[0]" />
+
+    <LinearLayout
+        android:id="@+id/holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/min_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginRight="@dimen/min_margin"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/media">
+
+        <TextView
+            android:id="@+id/team_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="128dp"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="129dp"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/national"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            tools:layout_editor_absoluteX="137dp"
+            tools:layout_editor_absoluteY="129dp"
+            tools:text="TextView" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/holder">
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/min_margin"
+            android:layout_marginRight="@dimen/min_margin"
+            tools:text="Text" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
